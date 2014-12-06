@@ -1,0 +1,24 @@
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+  background-color: #333333;
+  color: #c7c7c7;
+}
+
+#title {
+
+}
+
+.PS1 {
+  color: cyan;
+}
+
+.prompt {
+
+}
+.prompt::before {
+  content: "$ ";
+}
+
+.output-line {
+
+}
