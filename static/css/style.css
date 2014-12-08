@@ -2,6 +2,7 @@ body {
   font-family: "Lucida Console", Monaco, monospace;
   background-color: #333333;
   color: #dddddd;
+  font-size: 11pt;
 }
 .PS1 {
   color: cyan;
@@ -16,16 +17,16 @@ body {
 .output-line {
   padding-left: 20px;
   padding-right: 20px;
-  /* mouse over link */
-  /* selected link */
 }
-.output-line a:link,
-.output-line a:visited {
+a:link,
+a:visited {
   color: #00FF00;
 }
-.output-line a:hover {
+/* mouse over link */
+a:hover {
   color: #FF00FF;
 }
-.output-line a:active {
+/* selected link */
+a:active {
   color: #0000FF;
 }
