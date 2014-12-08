@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NathanRSmith/nathanrsmith.github.io/issues"
   },
-  "homepage": "https://github.com/NathanRSmith/nathanrsmith.github.io"
+  "homepage": "https://github.com/NathanRSmith/nathanrsmith.github.io",
+  "dependencies": {
+    "less": "^2.1.1"
+  }
 }
