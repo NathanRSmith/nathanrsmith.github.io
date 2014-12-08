@@ -3,29 +3,43 @@ body {
   background-color: #333333;
   color: #dddddd;
 }
+
+#title {
+
+}
+
 .PS1 {
   color: cyan;
+}
+
+.prompt {
+  // margin-bottom: 5px;
 }
 .prompt::before {
   content: "$ ";
 }
+
 .output {
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
 .output-line {
   padding-left: 20px;
   padding-right: 20px;
+
+  a:link, a:visited {
+    color: #00FF00;
+  }
+
   /* mouse over link */
+  a:hover {
+    color: #FF00FF;
+  }
+
   /* selected link */
-}
-.output-line a:link,
-.output-line a:visited {
-  color: #00FF00;
-}
-.output-line a:hover {
-  color: #FF00FF;
-}
-.output-line a:active {
-  color: #0000FF;
+  a:active {
+    color: #0000FF;
+  }
+
 }

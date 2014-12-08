@@ -1,0 +1,19 @@
+{
+  "name": "nathanrsmith.github.io",
+  "version": "1.0.0",
+  "description": "nathanrsmith.github.io ======================",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NathanRSmith/nathanrsmith.github.io.git"
+  },
+  "author": "Nathan Smith",
+  "license": "Copyright 2014 Nathan Smith",
+  "bugs": {
+    "url": "https://github.com/NathanRSmith/nathanrsmith.github.io/issues"
+  },
+  "homepage": "https://github.com/NathanRSmith/nathanrsmith.github.io"
+}
