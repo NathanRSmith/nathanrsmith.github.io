@@ -3,9 +3,11 @@
   var PROMPT_BASE_WAIT = 60;
   var PROMPT_PRE_WAIT = 1000;
   var PROMPT_POST_WAIT = 100;
+  var CLICK_MULTIPLIER = 0.15;
   var CURSOR = "&#9612;";
 
   var content = $('#body').children();
+  var multiplier = 1;
   var idx = 0;
   var prompt_idx = 0;
   var prompt_content;
@@ -19,7 +21,7 @@
       prompt_content = $el.text();
       $el.html(CURSOR);
       $el.addClass('visible');
-      setTimeout(promptStep, PROMPT_PRE_WAIT);
+      setTimeout(promptStep, PROMPT_PRE_WAIT*multiplier);
     }
     // Otherwise, show and go to next
     else {
@@ -42,7 +44,7 @@
 
       prompt_idx = 0;
       idx += 1;
-      setTimeout(step, PROMPT_POST_WAIT);
+      setTimeout(step, PROMPT_POST_WAIT*multiplier);
     }
     // Show next character
     else {
@@ -55,8 +57,13 @@
 
   // Calculate time to wait til next letter
   function getPromptStepWait(val) {
-    return PROMPT_BASE_WAIT;
+    return PROMPT_BASE_WAIT*multiplier;
   }
+
+
+  $(document).click(function() {
+    multiplier = CLICK_MULTIPLIER;
+  })
 
 
 
