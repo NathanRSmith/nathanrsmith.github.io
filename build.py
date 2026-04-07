@@ -3,8 +3,6 @@
 import os, shutil
 import sys
 from subprocess import call
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -60,7 +58,7 @@ def build():
 
                 with open(os.path.join(*([BUILD_DIR]+path_rel_build+[template])), 'w') as f:
                     try:
-                        print 'Rendering %s' % os.path.join( *(sroot[1:]+[template]) )
+                        print('Rendering %s' % os.path.join( *(sroot[1:]+[template]) ))
                         f.write(
                             env.get_template(
                                 os.path.join(
@@ -69,27 +67,27 @@ def build():
                             ).render(context)
                         )
                     except:
-                        print 'ERROR: %s'%os.path.join(root, template)
+                        print('ERROR: %s' % os.path.join(root, template))
                         raise
 
     # Build LESS
-    print 'Compiling LESS to CSS'
+    print('Compiling LESS to CSS')
     call(['node', 'node_modules/.bin/lessc', 'static/less/style.less', 'static/css/style.css'])
 
     # copy static files
-    print 'Copying static files'
+    print('Copying static files')
     shutil.copytree('static', os.path.join(BUILD_DIR, 'static'))
 
     # copy media files
-    print 'Copying media files'
+    print('Copying media files')
     shutil.copytree('media', os.path.join(BUILD_DIR, 'media'))
 
     # copy bower resources
     if os.path.exists('bower_components'):
-        print 'Copying bower files'
+        print('Copying bower files')
         shutil.copytree('bower_components', os.path.join(BUILD_DIR, 'bower_components'))
 
-    print 'Done'
+    print('Done')
 
 
 if __name__ == '__main__':

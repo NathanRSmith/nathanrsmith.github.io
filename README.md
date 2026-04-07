@@ -2,13 +2,12 @@ nathanrsmith.github.io
 ======================
 
     git clone -b build https://github.com/NathanRSmith/nathanrsmith.github.io.git
-    pip install -r requirements.txt
+    uv pip install -r requirements.txt
     npm install
-    ./build.py
-    cd build
-    python -m SimpleHTTPServer
+    uv run build.py
+    uv run python -m http.server --directory build 8000
     open http://localhost:8000
 
 clickety clack
 
-    ghp-import -npb master build/
+    uv run ghp-import -npb master build/
